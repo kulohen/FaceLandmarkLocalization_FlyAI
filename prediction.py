@@ -23,7 +23,7 @@ class Prediction(FlyAI):
             self.model = load_model(model_path)
 
 
-    def predict(self, input_data):
+    def predict(self, **input_data):
         '''
         模型预测返回结果
         :param input: input是app.yaml中 model-》input设置的输入，项目设定不可以修改，输入一条数据是字典类型
@@ -89,8 +89,8 @@ if __name__ == '__main__':
     # image/11500.png
     # b= {'image_path': './data/input/FaceLandmarkLocalization_FlyAI/image/imgsbf2908dfa55a56c8ce1b2dab.png'}
     b = {'image_path': 'image/imgsbf2908dfa55a56c8ce1b2dab.png'}
-    # b = "FishClassification/image/0.png"
+    # b='image/imgsbf2908dfa55a56c8ce1b2dab.png'
     a = Prediction()
     a.load_model()
-    c = a.predict(b)
+    c = a.predict(**b)
     print(c)

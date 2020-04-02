@@ -7,7 +7,7 @@ import os
 import argparse
 import cv2
 import numpy as np
-from keras.applications.inception_v3 import InceptionV3
+from keras.applications import InceptionV3
 from keras.models import Model
 from keras.layers import Dense, GlobalAveragePooling2D
 from flyai.utils import remote_helper
