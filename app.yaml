@@ -1,0 +1,34 @@
+algorithm: CNN
+author: xy
+data:
+  id: FaceLandmarkLocalization
+  source:
+  - id: FaceLandmarkLocalization
+    name: ""
+    source: https://www.flyai.com/d/FaceLandmarkLocalization
+description: ""
+framework: keras
+language: Python3
+model:
+  input:
+    columns:
+    - name: image_path
+      sample: 31031
+      type: str
+
+  output:
+    columns:
+    - name: label
+      sample: 0
+      type: str
+name: ""
+project:
+  algorithm: CNN
+  framework: keras
+  id: FaceLandmarkLocalization
+  language: Python3
+  prediction:
+    file: prediction.py
+  train:
+    file: main.py
+topic: ""
